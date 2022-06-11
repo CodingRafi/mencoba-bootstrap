@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <style>
+    
+        .message{
+          margin-top: 25px;
+          width: 800px;
+          margin-bottom: -20px;
+        }
+
+        .hasil {
+          width: 400px;
+          height: 500px;
+          display: flex;
+          justify-content: center;
+          display: none;
+          width: 0%;
+        }
+
+        .hasil1 .bungkus1 {
+          text-align: center;
+          position: absolute;
+        }
+
+        .container {
+          width: 80%;
+        }
+        
+    </style>
+
+    <script>
+        
+    </script>
+
+    <title>Data Siswa</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <div class="container">
+        <a class="navbar-brand" href="#">Data Siswa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <button type="button" class="btn btn-primary tambah" data-toggle="modal" data-target="#exampleModal">
+                Tambah Data Siswa
+              </button>
+          </div>
+        </div>
+        </div>
+      </nav>
+      <div class="container message">
+
+      </div>
+
+      
+      <div class="bungkus">
+
+     
+<div class="main1">
+  <div class="container mt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Siswa</th>
+            <th scope="col">Kelas</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">action</th>
+          </tr>
+        </thead>
+        <tbody class="tampilData">
+          
+            
+          
+        </tbody>
+      </table>
+    </div>
+</div>
+  <div class="hasil">
+    <div class="card mt-4 tampil" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style="font-size: 30px;text-align: center;padding-bottom:15px;border-bottom: 2px solid black;">Edit Data Siswa</h5>
+        <div class="form-group">
+          <label for="namaedit">Nama Siswa</label>
+          <input type="text" class="form-control" id="namaedit" class="namaedit">
+        </div>
+        <div class="form-group">
+          <label for="kelasedit">Kelas</label>
+          <select class="form-control" id="kelasedit">
+            <option value="X">X</option>
+            <option value="XI">XI</option>
+            <option value="XII">XII</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="alamat">Alamat</label>
+          <textarea class="form-control" id="alamat" rows="3"></textarea>
+        </div>
+        <div class="bungkus4" style="display: flex;justify-content: center;padding-top: 14px;">
+          <button type="button" class="btn btn-secondary" style="margin-right: 10px;" onclick="batal()">Batal</button>
+          <button type="button" class="btn btn-primary editbaru" style="margin-left: 10px;" >Edit</button>
+      </div>
+      </div>
+    </div>
+</div>
+
+      <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="judul"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container" style="width: 100%;">
+                        <div class="form-group">
+                            <label for="namasiswa">Nama Siswa</label>
+                            <input type="text" class="form-control" id="namasiswa" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="kelas">Kelas</label>
+                            <select class="form-control" id="kelas">
+                              <option value="X">X</option>
+                              <option value="XI">XI</option>
+                              <option value="XII">XII</option>
+                            </select>
+                          </div>
+                          <div class="form-group">
+                            <label for="alamat">Alamat</label>
+                            <textarea class="form-control" id="alamat" rows="3"></textarea>
+                          </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary batal" data-dismiss="modal">Batal</button>
+                    <button type="submit" class="btn btn-primary simpan" id="button">Simpan</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    
+        <script src="script.js"></script>
+
+        <script>
+          
+        </script>
+  </body>
+</html>
